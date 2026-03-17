@@ -1,5 +1,5 @@
 html {
-	background: #f7f7f7 url('../res/profile-picture-4.png') no-repeat bottom right fixed;
+	background: #f7f7f7 url('../res/band.png') no-repeat bottom right fixed;
 	-webkit-background-size: contain;
 	-moz-background-size: contain;
 	-o-background-size: contain;
@@ -64,10 +64,6 @@ ul {
 
 .hidden {
 	display: none;
-}
-
-#years {
-	text-transform: capitalize;
 }
 
 .social img {
@@ -136,9 +132,5 @@ ul {
 
 			ul {
 				font-size: 20pt;
-			}
-
-			h1:before {
-				height: 700px;
 			}
   }
