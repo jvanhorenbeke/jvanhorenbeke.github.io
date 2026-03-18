@@ -1,8 +1,5 @@
 html {
 	background: #f7f7f7 url('../res/band.png') no-repeat bottom right fixed;
-	-webkit-background-size: contain;
-	-moz-background-size: contain;
-	-o-background-size: contain;
 	background-size: contain;
 }
 
@@ -25,7 +22,7 @@ p {
 	line-height: 1.4em;
 }
 
-a, a:hover, a:visited, a:active {
+a, a:visited {
 	color: black;
 	font-weight: 500;
 	text-decoration: none;
@@ -40,12 +37,8 @@ li {
 	margin-top: .5em;
 }
 
-#work ul, #education ul {
+ul {
 	font-size: 11pt;
-}
-
-#projects ul {
-	font-size: 10pt;
 }
 
 h1 {
@@ -66,17 +59,12 @@ h2 {
 }
 
 .when {
-	font-weight: 200;
 	color: #888;
-}
-
-.where, .description {
-	font-style: italic;
-	font-weight: 200;
 }
 
 .where {
 	display: block;
+	font-style: italic;
 }
 
 .social img {
@@ -84,10 +72,6 @@ h2 {
 	height: 75px;
 	filter: grayscale(1);
 	opacity: 0.5;
-}
-
-.hidden {
-	display: none;
 }
 
 @media only screen
@@ -135,9 +119,5 @@ h2 {
 
 		h2 {
 			font-size: 22pt;
-		}
-
-		#projects ul {
-			font-size: 20pt;
 		}
 	}
