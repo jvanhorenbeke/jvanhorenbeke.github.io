@@ -1,123 +1,191 @@
+:root {
+	--ink: #1a1a1a;
+	--muted: #6b6b6b;
+	--rule: #e2e2e2;
+	--accent: #7a2218;
+	--paper: #fdfdfc;
+}
+
+* {
+	box-sizing: border-box;
+}
+
 html {
-	background: #f7f7f7 url('../res/band.png') no-repeat bottom right fixed;
-	background-size: contain;
+	background: var(--paper);
 }
 
 body {
-	font-family: "SF UI Display", Helvetica, Arial, sans-serif;
-	font-weight: 200;
-	font-size: 14pt;
-	letter-spacing: .025em;
-	margin: 13% 5%;
-	padding-bottom: 3em;
+	font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 20px;
+	line-height: 1.65;
+	letter-spacing: -0.011em;
+	color: var(--ink);
+	-webkit-font-smoothing: antialiased;
+	text-rendering: optimizeLegibility;
+	margin: 0;
 }
 
-p, li, h1, h2 {
-	width: 55%;
-	max-width: 540px;
+main {
+	max-width: 40rem;
+	margin: 0 auto;
+	padding: 6rem 1.5rem 5rem;
 }
 
-p {
-	margin: 1em 0;
-	line-height: 1.4em;
-}
+/* Masthead */
 
-a, a:visited {
-	color: black;
-	font-weight: 500;
-	text-decoration: none;
-}
-
-a:hover {
-	background-color: #fff700;
-}
-
-li {
-	line-height: 1.4em;
-	margin-top: .5em;
-}
-
-ul {
-	font-size: 11pt;
+.masthead {
+	margin-bottom: 2.5rem;
+	padding-bottom: 1.5rem;
+	border-bottom: 1px solid var(--rule);
+	text-align: center;
 }
 
 h1 {
-	font-size: 20pt;
-	font-weight: 400;
+	font-size: 2.6rem;
+	font-weight: 700;
+	letter-spacing: -0.03em;
+	line-height: 1.1;
+	text-wrap: balance;
+	margin: 0;
 }
 
+.subtitle {
+	margin: 0.4rem 0 0;
+	font-size: 0.95rem;
+	color: var(--muted);
+	font-style: italic;
+}
+
+/* Bio */
+
+.bio p {
+	margin: 0 0 1.1rem;
+	text-wrap: pretty;
+}
+
+.bio {
+	font-size: 1.05rem;
+}
+
+.bio p:last-child {
+	margin-bottom: 0;
+}
+
+/* Section headings */
+
 h2 {
-	font-size: 11pt;
-	letter-spacing: .1em;
-	margin: 3em 0 1em;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+	font-size: 0.78rem;
+	font-weight: 600;
+	letter-spacing: 0.12em;
 	text-transform: uppercase;
-	font-weight: 500;
+	color: var(--muted);
+	margin: 3rem 0 1rem;
+	padding-bottom: 0.4rem;
+	border-bottom: 1px solid var(--rule);
+}
+
+/* Entry lists */
+
+.entries {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.entries li {
+	margin: 0 0 1.1rem;
+}
+
+.entries li:last-child {
+	margin-bottom: 0;
+}
+
+.entry-head {
+	display: flex;
+	justify-content: space-between;
+	align-items: baseline;
+	gap: 1rem;
 }
 
 .what {
-	font-weight: 500;
+	font-weight: 600;
 }
 
 .when {
-	color: #888;
+	flex-shrink: 0;
+	font-size: 0.85rem;
+	color: var(--muted);
+	font-variant-numeric: tabular-nums;
 }
 
 .where {
 	display: block;
-	font-style: italic;
+	color: var(--muted);
+	font-size: 0.95rem;
 }
 
-.social img {
-	width: 75px;
-	height: 75px;
+/* Links */
+
+a, a:visited {
+	color: var(--accent);
+	text-decoration: none;
+	border-bottom: 1px solid rgba(122, 34, 24, 0.25);
+	transition: border-color 0.15s ease;
+}
+
+a:hover {
+	border-bottom-color: var(--accent);
+}
+
+s {
+	color: var(--muted);
+}
+
+/* Social footer */
+
+#social {
+	margin-top: 3.5rem;
+	padding-top: 1.5rem;
+	border-top: 1px solid var(--rule);
+	text-align: center;
+}
+
+.social-links {
+	margin: 0;
+}
+
+.social-links img {
+	width: 28px;
+	height: 28px;
+	margin: 0 0.6rem;
 	filter: grayscale(1);
-	opacity: 0.5;
+	opacity: 0.45;
+	vertical-align: middle;
+	transition: opacity 0.15s ease;
 }
 
-@media only screen
-	and (max-width: 1200px) {
+.social-links img:hover {
+	opacity: 0.85;
+}
 
-		html {
-			background: #f7f7f7;
-		}
+/* Small screens */
 
-		body {
-			padding-top: 20px;
-			margin: 0 5%;
-		}
-
-		p, li, h1, h2 {
-			width: 100%;
-			margin: 1em auto;
-		}
-
-		li {
-			margin: .5em auto 0;
-		}
-
-		h2 {
-			margin: 3em auto 1em;
-		}
-
+@media only screen and (max-width: 480px) {
+	body {
+		font-size: 18px;
 	}
 
-@media only screen
-	and (min-device-width: 375px)
-	and (max-device-width: 667px)
-	and (-webkit-min-device-pixel-ratio: 2) {
-		body {
-			font-size: 28pt;
-		}
-
-		p, li, h1, h2 {
-			max-width: none;
-		}
-
-		h1 {
-			font-size: 40pt;
-		}
-
-		h2 {
-			font-size: 22pt;
-		}
+	main {
+		padding: 3rem 1.25rem 3.5rem;
 	}
+
+	h1 {
+		font-size: 2rem;
+	}
+
+	.entry-head {
+		flex-direction: column;
+		gap: 0.1rem;
+	}
+}
