@@ -49,13 +49,6 @@ h1 {
 	margin: 0;
 }
 
-.subtitle {
-	margin: 0.4rem 0 0;
-	font-size: 0.95rem;
-	color: var(--muted);
-	font-style: italic;
-}
-
 /* Bio */
 
 .bio p {
@@ -112,17 +105,14 @@ h2 {
 	font-weight: 600;
 }
 
-.when {
-	flex-shrink: 0;
-	font-size: 0.85rem;
-	color: var(--muted);
-	font-variant-numeric: tabular-nums;
-}
-
 .where {
 	display: block;
 	color: var(--muted);
 	font-size: 0.95rem;
+}
+
+.hidden {
+	display: none;
 }
 
 /* Links */
