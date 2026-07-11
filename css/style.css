@@ -145,6 +145,10 @@ s {
 	margin: 0;
 }
 
+.social-links a {
+	border-bottom: none;
+}
+
 .social-links img {
 	width: 28px;
 	height: 28px;
